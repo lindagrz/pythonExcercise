@@ -6,6 +6,7 @@ print("Ba"+"na"*5)
 
 # print the number of seconds in a year calculated from months, days, minutes, seconds
 print(12*30*1440*60) #12 months by 30 days, 1 day ~ 1440 min, 60 seconds
+print(365*24*60*60) #just for fun
 
 # how much a googol is that is 10 to the power of the 100th
 print(10**100)
