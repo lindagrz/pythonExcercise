@@ -22,7 +22,7 @@
 #     formula is: farenheit = 32+celsius*(9/5)
 #     PS Remember about data type conversion, also consider precision
 
-def excercise1():
+def exercise1():
     from datetime import date
 
     username = input("Input your username: ")
@@ -32,7 +32,7 @@ def excercise1():
     print(f"You will be 100 years old in {to_hundred} years in {year_hundred} \n")
 
 
-def excercise2():
+def exercise2():
     print("This program will calculate room volume.")
     width = input("Input room width: ")
     length = input("Input room length: ")
@@ -40,16 +40,18 @@ def excercise2():
     volume = float(width) * float(length) * float(height)
     print(f"Room volume is {volume} units \n")
 
-def excercise3():
-    celsius = input("Input temperature in celsius: ")
-    farenheit = 32 + float(celsius) * (9 / 5)
-    print(f"Temperature in farenheit is {str(round(farenheit))}")
+
+def exercise3():
+    celsius = input("Input temperature in C: ")
+    fahrenheit = 32 + float(celsius) * (9 / 5)
+    print(f"Temperature in F is {str(round(fahrenheit))}")
 
 
 def main():
-    excercise1()
-    excercise2()
-    excercise3()
+    exercise1()
+    exercise2()
+    exercise3()
+
 
 if __name__ == "__main__":
     main()
