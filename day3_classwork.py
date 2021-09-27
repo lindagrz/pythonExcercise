@@ -28,7 +28,7 @@ def xmas_bonus():
     salary = round(float(input("What is your monthly salary? ")), precision)
     years_worked = round(float(input("For how many years have you worked in the company? ")), precision)
 
-    if years_worked >= service_min:
+    if years_worked > service_min:
         bonus_amnt = salary * bonus * (years_worked - service_min)
         print(f"Your bonus is {bonus_amnt} \nMerry Christmas!")
     else:
