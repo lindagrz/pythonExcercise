@@ -25,12 +25,12 @@ def xmas_bonus():
     bonus = 0.15
     service_min = 2
 
-    salary = round(float(input("What is your monthly salary? ")), precision)
-    years_worked = round(float(input("For how many years have you worked in the company? ")), precision)
+    salary = float(input("What is your monthly salary? "))
+    years_worked = float(input("For how many years have you worked in the company? "))
 
     if years_worked > service_min:
         bonus_amnt = salary * bonus * (years_worked - service_min)
-        print(f"Your bonus is {bonus_amnt} \nMerry Christmas!")
+        print(f"Your bonus is {bonus_amnt:.{precision}f} \nMerry Christmas!")
     else:
         print("Sorry, no Xmas bonus")
 
@@ -40,6 +40,20 @@ def ordered_output():
     n2 = int(input("Input second number: "))
     n3 = int(input("Input third number: "))
 
+    # legal solution
+    print("Solution 1result: ")
+    if n1 <= n2:
+        if n1 <= n3:
+            print(n1)
+            print(n2, n3, sep="\n") if n2 <= n3 else print(n3, n2, sep="\n")
+        else:
+            print(n3, n1, n2, sep="\n")
+    elif n2 <= n3:
+        print(n2, n3, n1, sep="\n")
+    else:
+        print(n3, n2, n1, sep="\n")
+
+    # illegal solution
     if n1 > n2:
         n1, n2 = n2, n1
     if n1 > n3:
@@ -47,7 +61,7 @@ def ordered_output():
     if n2 > n3:
         n2, n3 = n3, n2
 
-    print("Result: ")
+    print("Solution 2 result: ")
     print(n1, n2, n3, sep=" <= ")
 
 
