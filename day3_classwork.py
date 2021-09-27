@@ -21,7 +21,7 @@ def health_check():
 
 
 def xmas_bonus():
-    precision = 1
+    precision = 2
     bonus = 0.15
     service_min = 2
 
@@ -30,7 +30,7 @@ def xmas_bonus():
 
     if years_worked >= service_min:
         bonus_amnt = salary * bonus * (years_worked - service_min)
-        print(f"Your bonus is {bonus_amnt}. \nMerry Christmas!")
+        print(f"Your bonus is {bonus_amnt} \nMerry Christmas!")
     else:
         print("Sorry, no Xmas bonus")
 
