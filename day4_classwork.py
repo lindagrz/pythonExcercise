@@ -38,7 +38,7 @@ def fizzbuzz():
 def christmas_tree():
     height = int(input("Enter the height of the tree: "))
     for i in range(height):
-        print(' ' * (height - i + 1), '*' * (2 * i + 1))  # x2 is always rounded up
+        print(' ' * (height - i - 1), '*' * (2 * i + 1))  # x2 is always rounded up
 
 
 def primes():
@@ -55,9 +55,9 @@ def primes():
 
 
 def main():
-    fizzbuzz()
+    # fizzbuzz()
     christmas_tree()
-    primes()
+    # primes()
 
 
 if __name__ == "__main__":
