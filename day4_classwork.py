@@ -22,27 +22,30 @@
 def fizzbuzz():
     fizz = 5
     buzz = 7
+    end_num = 100
+    end_str = ", "
 
-    for i in range(1, 101):
+    for i in range(1, end_num + 1):
+        if i == end_num:
+            end_str = ""
         if i % (fizz * buzz) == 0:
-            print("FizzBuzz")
-            continue
+            print("FizzBuzz", end=end_str)
         elif i % buzz == 0:
-            print("Buzz")
-            continue
+            print("Buzz", end=end_str)
         elif i % fizz == 0:
-            print("Fizz")
-        print(i)
+            print("Fizz", end=end_str)
+        else:
+            print(i, end=end_str)
 
 
 def christmas_tree():
     height = int(input("Enter the height of the tree: "))
     for i in range(height):
-        print(' ' * (height - i - 1), '*' * (2 * i + 1))  # x2 is always rounded up
+        print(' ' * (height - i - 1) + '*' * (2 * i + 1))
 
 
 def primes():
-    num_to_test = int(input("Enter a num_to_test: "))
+    num_to_test = int(input("Enter a number: "))
     if num_to_test > 1:  # 1 is not a prime + is it positive?
         for i in range(2, num_to_test):  # test all numbers in range up to the input
             if (num_to_test % i) == 0:
@@ -55,8 +58,8 @@ def primes():
 
 
 def main():
-    fizzbuzz()
-    christmas_tree()
+    # fizzbuzz()
+    # christmas_tree()
     primes()
 
 
