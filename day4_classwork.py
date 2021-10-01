@@ -55,9 +55,9 @@ def primes():
 
 
 def main():
-    # fizzbuzz()
+    fizzbuzz()
     christmas_tree()
-    # primes()
+    primes()
 
 
 if __name__ == "__main__":
