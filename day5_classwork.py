@@ -31,13 +31,13 @@ def almost_hangman():
     word = input("First player, enter the text: ")
     # word = "Kartupeļu lauks"
 
-    guessed = "".join("*" for char in word)
+    guessed = "*" * len(word)
     letter = " "  # to add back the spaces before starting
 
     while not letter == "0":
-        for i in range(len(word)):
-            if word[i].lower() in letter.lower():  # guesses are not case sensitive
-                guessed = guessed[:i] + word[i] + guessed[i + 1:]
+        for i, c in enumerate(word):
+            if c.lower() in letter.lower():  # guesses are not case sensitive
+                guessed = guessed[:i] + c + guessed[i + 1:]
 
         if guessed.find("*") == -1:
             print("Good job!")
@@ -46,7 +46,7 @@ def almost_hangman():
         print(guessed)
         letter = input("Player 2: Guess a letter (or input 0 to give up): ")
 
-    print(f"The word is: {word}")
+    print(f"The answer was: {word}")
 
 
 def text_conversion():
@@ -55,21 +55,26 @@ def text_conversion():
     # text = "The car is not new"
     # text = "This cottage cheese is not so bad"
     # text = "That was pretty bad, was in not my friend?"
+    # text = "This sport is not badminton!"
 
     start = "not"
-    alt_start = "is"
     tail = "bad"
-    alt_tail = "good"
+    alternative = "good"
 
-    if text.find(start) != -1 and text.find(tail, text.find(start)) != -1:
+    # # for the Latvian language variation
+    # text = "Laikapstākļi nav slikti"
+    # text = "Mašīna nav jauna"
+    # text = "Kartupeļu biezenis nav nemaz tik slikts"
+    # start = "nav"
+    # tail = "slikt"
+    # alternative = "ir lab"
+
+    if text.find(start) != -1 and text.find(tail, text.find(start)) != -1 and text.split(tail)[1][0].isspace():
         starting_text = text.split(start)[0]
         ending_text = text.split(tail)[1]
-
-        if alt_start == starting_text.split()[-1]:
-            alt_start = ""
-        text = starting_text + alt_start + alt_tail + ending_text
-
-    print("Result: " + text)
+        print(f"Result: {starting_text}{alternative}{ending_text}")
+    else:
+        print(f"Nothing to convert: {text}")
 
 
 def main():
