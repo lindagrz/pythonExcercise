@@ -99,7 +99,7 @@ def reversed_words():
     sentence = input("Input the sentence: ")
     reversed_sent = sentence.split()
     reversed_sent = [word[::-1] for i, word in enumerate(reversed_sent)]
-    print(f"{sentence} --> {' '.join(reversed_sent).capitalize()}")
+    print(f"{sentence} -> {' '.join(reversed_sent).capitalize()}")
 
 
 # 4. Prime numbers -
