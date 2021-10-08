@@ -82,7 +82,7 @@ def cubes():
     for i, val in enumerate(list_numbers):
         list_cubes.append(val ** 3)
 
-    [print(f"{list_numbers[i]} cubed: {list_cubes[i]}") for i, val in enumerate(list_numbers)]
+    [print(f"{val} cubed: {list_cubes[i]}") for i, val in enumerate(list_numbers)]
     print(f"All cubes: {list_cubes}")
 
 
