@@ -44,14 +44,7 @@ def average_value_1c():
             break
         else:
             list_numbers.append(float(user_input))
-            if len(list_numbers) <= top * 2:
-                total = sum(list_numbers)
-                print(f"All numbers: {list_numbers}\nAverage is {total / len(list_numbers)}")
-            else:
-                total = 0
-                for i in range(top):
-                    total = total + list_numbers[i] + list_numbers[-i - 1]
-                print(f"All numbers: {list_numbers}\nAverage of top and last {top} numbers is {total / top / 2:.2f}")
+            print(f"Numbers: {sorted(list_numbers)[:top]} ... {sorted(list_numbers)[-top:]}\nAverage is {sum(list_numbers) / len(list_numbers):.2f}")
 
 
 # 2. Cubes
@@ -70,19 +63,15 @@ def average_value_1c():
 #
 
 def cubes():
-    list_numbers = [int(input("Input starting number: ")), int(input("Input last number: "))]  # just for fun
+    starting_number = int(input("Input starting number: "))
+    last_number = int(input("Input last number: "))
 
-    if list_numbers[0] > list_numbers[-1]:
-        direction = -1
-    else:
-        direction = 1
-
-    list_numbers = list(range(list_numbers[0], list_numbers[1] + direction, direction))
+    direction = -1 if starting_number > last_number else 1
+    list_numbers = list(range(starting_number, last_number + direction, direction))
     list_cubes = []
     for i, val in enumerate(list_numbers):
         list_cubes.append(val ** 3)
-
-    [print(f"{val} cubed: {list_cubes[i]}") for i, val in enumerate(list_numbers)]
+        print(f"{val} cubed: {list_cubes[i]}")
     print(f"All cubes: {list_cubes}")
 
 
@@ -97,9 +86,10 @@ def cubes():
 #
 def reversed_words():
     sentence = input("Input the sentence: ")
-    reversed_sent = sentence.split()
-    reversed_sent = [word[::-1] for i, word in enumerate(reversed_sent)]
-    print(f"{sentence} -> {' '.join(reversed_sent).capitalize()}")
+    words = sentence.split()
+    reversed_word_list = [word[::-1] for word in words]
+    reversed_sentence = ' '.join(reversed_word_list).capitalize()
+    print(f"{sentence} -> {reversed_sentence}")
 
 
 # 4. Prime numbers -
@@ -115,13 +105,11 @@ def primes():
 
     while len(prime_list) < max_num:
         current_number += 1
-        if current_number > 1:  # reused code from lesson 4
-            for i in range(2, current_number):
-                if (current_number % i) == 0:
-                    break
-            else:
-                prime_list.append(current_number)
-
+        for i in range(2, current_number):  # reused code from lesson 4
+            if (current_number % i) == 0:
+                break
+        else:
+            prime_list.append(current_number)
     print(f"Primes: {prime_list}")
 
 
