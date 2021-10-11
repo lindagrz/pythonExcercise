@@ -63,7 +63,7 @@ def main():
     res = add_mult_alternative(2, 5, 4, 1)
     print(res)
 
-    res = is_palindrome("Alus ari i ra    sula")  # -> True
+    res = is_palindrome("Alus ari i ra    sula")  # ->  True
     # res = is_palindrome("ABa")  # -> True
     # res = is_palindrome("nava")  # -> False
     print(res)
