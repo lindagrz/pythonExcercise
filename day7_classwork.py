@@ -23,8 +23,7 @@ def add_mult_alternative(*parameters):
         print(f"equation: ({parameters[0]} + {parameters[1]}) * {parameters[2]}")
         return (parameters[0] + parameters[1]) * parameters[2]
     else:
-        print("Incorrect number of parameters! Please specify 3")
-        return False
+        return print("Incorrect number of parameters! Please specify 3")
 
 
 # 2. Palindrome
