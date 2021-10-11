@@ -18,10 +18,11 @@ def add_mult(a, b, c):
 
 
 def add_mult_alternative(*parameters):
-    req_param = 3
-    f"""
-    Needs {req_param} parameters to calculate result
     """
+    Needs 3 parameters to calculate result
+    """
+    req_param = 3
+
     parameters = list(parameters)
     if len(parameters) == req_param:
         parameters.sort()
