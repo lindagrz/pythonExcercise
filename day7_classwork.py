@@ -58,7 +58,7 @@ def get_city_year(p0, perc, delta, p, years=1):
 
 def main():
     print(add_mult(2, 5, 4))  # -> 30
-    print(add_mult_alternative(2, 5, 4, 1))
+    print(add_mult_alternative(2, 5, 4))
 
     print(is_palindrome("Alus ari i ra    sula"))  # ->  True
     # print(is_palindrome("ABa"))  # -> True
