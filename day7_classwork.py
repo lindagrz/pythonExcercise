@@ -57,22 +57,17 @@ def get_city_year(p0, perc, delta, p, years=1):
 
 
 def main():
-    res = add_mult(2, 5, 4)  # -> 30
-    print(res)
+    print(add_mult(2, 5, 4))  # -> 30
+    print(add_mult_alternative(2, 5, 4, 1))
 
-    res = add_mult_alternative(2, 5, 4, 1)
-    print(res)
+    print(is_palindrome("Alus ari i ra    sula"))  # ->  True
+    # print(is_palindrome("ABa"))  # -> True
+    # print(is_palindrome("nava"))  # -> False
 
-    res = is_palindrome("Alus ari i ra    sula")  # ->  True
-    # res = is_palindrome("ABa")  # -> True
-    # res = is_palindrome("nava")  # -> False
-    print(res)
-
-    res = get_city_year(1000, 2, 50, 1200)  # -> 3
-    # res = get_city_year(1000, 2, -50, 5000)  # -> -1
-    # res = get_city_year(1500, 5, 100, 5000)  # -> 15
-    # res = get_city_year(1500000, 2.5, 10000, 2000000)  # -> 10
-    print(res)
+    print(get_city_year(1000, 2, 50, 1200))  # -> 3
+    # print(get_city_year(1000, 2, -50, 5000))  # -> -1
+    # print(get_city_year(1500, 5, 100, 5000))  # -> 15
+    # print(get_city_year(1500000, 2.5, 10000, 2000000))  # -> 10
 
 
 if __name__ == "__main__":
