@@ -56,7 +56,7 @@ def get_city_year(p0, perc, delta, p, years=1):
     if predicted_p >= p:
         return years
     else:
-        return get_city_year(predicted_p, perc, delta, p, years + 1)
+        return get_city_year(predicted_p, perc, delta, p, years + 1)  # return 1 sounds like a bad idea here
 
 
 def main():
