@@ -7,10 +7,14 @@
 #
 
 def add_mult(a, b, c):
-    parameters = [a, b, c]
-    parameters.sort()
-    print(f"equation: ({parameters[0]} + {parameters[1]}) * {parameters[2]}")
-    return (parameters[0] + parameters[1]) * parameters[2]
+    if a > b:
+        a, b = b, a
+    if a > c:
+        a, c = c, a
+    if b > c:
+        b, c = c, b
+    print(f"equation: ({a} + {b}) * {c}")
+    return (a + b) * c
 
 
 def add_mult_alternative(*parameters):
