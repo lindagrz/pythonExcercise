@@ -7,12 +7,13 @@
 #
 
 def add_mult(a, b, c):
-    if a > b:
-        a, b = b, a
-    if a > c:
-        a, c = c, a
-    if b > c:
-        b, c = c, b
+    # if a > b:
+    #     a, b = b, a
+    # if a > c:
+    #     a, c = c, a
+    # if b > c:
+    #     b, c = c, b
+    a, b, c = sorted(a, b, c)
     print(f"equation: ({a} + {b}) * {c}")
     return (a + b) * c
 
