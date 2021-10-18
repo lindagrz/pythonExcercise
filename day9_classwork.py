@@ -10,7 +10,7 @@
 def get_min_avg_max(value_list):
     precision = 2
     sorted_list = sorted(list(value_list))
-    return {sorted_list[0], round(sum(sorted_list) / len(sorted_list), precision), sorted_list[-1]}
+    return (sorted_list[0], round(sum(sorted_list) / len(sorted_list), precision), sorted_list[-1])
 
 
 # 1b for those more experienced
@@ -39,7 +39,7 @@ def get_min_med_max(value_list):
     else:
         mean = (sorted_list[int(mean_index) - 1] + sorted_list[int(mean_index)]) / 2
 
-    return min(value_list), mean, max(value_list)
+    return (min(value_list), mean, max(value_list))
 
 
 # 2. Common Elements
