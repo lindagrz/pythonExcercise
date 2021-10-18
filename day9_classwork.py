@@ -89,8 +89,8 @@ def main():
     print(get_min_avg_max([0, 10, 1, 9]))
     print(get_min_avg_max([3, 2, 4, 1, 5]))
 
-    print(get_min_med_max([1, 5, 8, 4, 3]))  # -> (1,4,8)
-    print(get_min_med_max([2, 2, 9, 9, 4, 3]))  # -> (2,3,5,9)
+    print(get_min_med_max([1, 5, 8, 4, 3]))  # -> (1, 4, 8)
+    print(get_min_med_max([2, 2, 9, 9, 4, 3]))  # -> (2, 3.5, 9)
     print(get_min_med_max("baaac"))  # -> ('a', 'a', 'c')
 
     print(get_common_elements("abc", ['a', 'b'], ('b', 'c')))  # -> ('b',)
