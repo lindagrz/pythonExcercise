@@ -86,7 +86,7 @@ def is_pangram(text, alphabet='abcdefghijklmnopqrstuvwxyz'):
 
 
 def main():
-    print(get_min_avg_max([0, 10, 1, 9]))
+    print(get_min_avg_max([0, 10, 1, 9]))  # -> (0,5,10)
     print(get_min_avg_max([3, 2, 4, 1, 5]))
 
     print(get_min_med_max([1, 5, 8, 4, 3]))  # -> (1, 4, 8)
