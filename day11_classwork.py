@@ -40,9 +40,14 @@ def get_shuffled_cards(cards=get_new_deck()):
 # # you can add other methods and/or attributes if you wish to Deck class
 
 class Deck:
-    def __init__(self, available=get_new_deck(), spent=[]):
+    def __init__(self, available=get_new_deck(), spent=None):
+        if spent is None:
+            spent = []
         self.available = available
         self.spent = spent
+
+    def reset(self):
+        self.__init__()
 
     def shuffle(self):
         self.available = get_shuffled_cards(self.available)
@@ -68,6 +73,8 @@ def main():
     print("Picked up: ", hand)
     print("Discard pile: ", new_deck.spent)  # that's cheating, the deck is not shuffled here
     print()
+
+    new_deck.reset()
     new_deck.shuffle()
     hand = new_deck.get_cards(2)
     print("Picked up: ", hand)
