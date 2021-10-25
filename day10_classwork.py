@@ -20,6 +20,14 @@
 # Create multiple songs with lyrics
 
 
+def print_lyrics(lyrics, max_lines=0):
+    for line in lyrics:
+        print(line, sep="\n")
+        max_lines -= 1
+        if max_lines == 0:
+            break
+
+
 class Song:
 
     def __init__(self, title="Unknown Title", author="Unknown Artist", lyrics=[]):
@@ -30,20 +38,13 @@ class Song:
 
     def sing(self, max_lines=0):
         print("\nSinging:", self.author, "-", self.title)
-        for line in self.lyrics:
-            print(line, sep="\n")
-            max_lines -= 1
-            if max_lines == 0:
-                break
+        print_lyrics(self.lyrics, max_lines)
         return self
 
     def yell(self, max_lines=0):
         print("\nSinging:", self.author, "-", self.title)
-        for line in self.lyrics:
-            print(line.upper(), sep="\n")
-            max_lines -= 1
-            if max_lines == 0:
-                break
+        capital_lyrics = [line.upper() for line in self.lyrics]
+        print_lyrics(capital_lyrics, max_lines)
         return self
 
 
