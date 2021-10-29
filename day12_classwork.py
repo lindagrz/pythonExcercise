@@ -71,11 +71,11 @@ def get_word_usage(srcpath, destpath="", encoded="UTF-8"):
 
 
 def main():
-    print(file_line_len("day12_files/veidenbaums.txt"))
-    poem_lines = get_poem_lines("day12_files/veidenbaums.txt")
-    print(poem_lines)
-    save_lines("day12_files/savelines_res.txt", poem_lines)
-    clean_punkts("day12_files/savelines_res.txt", "day12_files/cleanpunkts_res.txt")
+    # print(file_line_len("day12_files/veidenbaums.txt"))
+    # poem_lines = get_poem_lines("day12_files/veidenbaums.txt")
+    # print(poem_lines)
+    # save_lines("day12_files/savelines_res.txt", poem_lines)
+    # clean_punkts("day12_files/savelines_res.txt", "day12_files/cleanpunkts_res.txt")
     get_word_usage("day12_files/cleanpunkts_res.txt", "day12_files/poem_stats.txt")
 
 
