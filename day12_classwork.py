@@ -66,8 +66,8 @@ def get_word_usage(srcpath, destpath="", encoded="UTF-8"):
     count = Counter(words)
     with open(destpath, mode="w", encoding=encoded) as f:
         f.write("vards skaits\n")
-        for c, word in count.most_common():
-            f.write(f"{c} {word}\n")
+        for word, c in count.most_common():
+            f.write(f"{word} {c}\n")
 
 
 def main():
