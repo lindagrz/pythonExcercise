@@ -7,11 +7,6 @@ from operator import itemgetter
 def main():
     url = "https://api.punkapi.com/v2/beers"
     response = requests.get(url)
-    # print(response.status_code)
-
-    # for i in range(10):
-    #     time.sleep(0.3)
-    #     beer_data = response.json()
 
     while True:
         time.sleep(0.3)
