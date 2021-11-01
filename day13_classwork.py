@@ -21,7 +21,7 @@ def main():
             if search in beer_data['description'].lower():
                 print(beer_data['name'], "-", beer_data['description'])
                 picked_answers.append(itemgetter('name', 'description')(beer_data))
-        with open("beer_data.json", mode="w+") as write_file:
+        with open("beer_data.json", mode="a") as write_file:
             json.dump(picked_answers, write_file, indent=4)
 
 
