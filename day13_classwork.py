@@ -3,8 +3,7 @@ import json
 import time
 
 
-def main():
-    url = "https://api.punkapi.com/v2/beers"
+def get_me_beers(url="https://api.punkapi.com/v2/beers"):
     response = requests.get(url)
     print("Status", response.status_code)
 
@@ -36,6 +35,10 @@ def main():
                 json.dump(picked_answers, write_file, indent=4)
 
         time.sleep(0.3)
+
+
+def main():
+    get_me_beers()
 
 
 if __name__ == "__main__":
